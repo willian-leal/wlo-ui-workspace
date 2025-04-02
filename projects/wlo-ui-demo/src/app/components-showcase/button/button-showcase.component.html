@@ -1,0 +1,307 @@
+<section class="container section">
+    <div class="section-texts">
+        <div class="section-title">
+            <wlo-typography variant="h1" tag="h1" text="Button"/>
+        </div>
+        <div class="section-description">
+            <wlo-typography variant="muted" tag="h3" text="A customizable button component with multiple variants, sizes, icons, and loading states."/>
+        </div>
+    </div>
+
+    <mat-tab-group>
+        <mat-tab label="Preview" >
+            <div class="tab-preview">
+                <wlo-button
+                    variant="primary"
+                    label="Primary"
+                ></wlo-button>
+            </div>
+        </mat-tab>
+        <mat-tab label="Code">
+            <div class="tab-code">
+                <code>
+                    <span>import &#123; WloButtonComponent &#125; from '&#64;wlo-ui/button';</span><br><br>
+                    <span>&lt;wlo-button variant="primary" label="Primary"&gt;&lt;/wlo-button&gt;</span> 
+                </code>
+            </div>
+        </mat-tab>
+    </mat-tab-group>
+
+    <div class="section-subtitle">
+        <wlo-typography variant="h2" tag="h2" text="Installation"/>
+    </div>
+    <div class="section-description">
+        <wlo-typography variant="muted" tag="h3" text="npm"/>
+    </div>
+
+    <div class="tab-code installation">
+        <code>
+            <span>npx wlo-ui&#64;latest add button</span>
+        </code>
+    </div>
+
+    <div class="section-subtitle">
+        <wlo-typography variant="h2" tag="h2" text="Usage"/>
+    </div>
+
+    <div class="tab-code installation">
+        <code>
+            <span>import &#123; WloButtonComponent &#125; from '&#64;wlo-ui/button';</span>
+        </code>
+    </div>
+    <div class="tab-code installation">
+        <code>
+            <span>&lt;wlo-button variant="primary" label="Primary"&gt;&lt;/wlo-button&gt;</span>
+        </code>
+    </div>
+
+    <div class="section-subtitle">
+        <wlo-typography variant="h2" tag="h2" text="Examples"/>
+    </div>
+    <div class="section-description examples">
+        <wlo-typography variant="h4" tag="h3" text="Primary"/>
+    </div>
+    <div class="section-description">
+        <wlo-typography variant="muted" tag="h4" text="The main action button.
+        Use for primary actions on a screen, such as submitting a form or saving data. It should stand out and be used only once per section or screen."/>
+    </div>
+
+    <mat-tab-group>
+        <mat-tab label="Preview" >
+            <div class="tab-preview">
+                <wlo-button
+                    variant="primary"
+                    label="Primary"
+                ></wlo-button>
+            </div>
+        </mat-tab>
+        <mat-tab label="Code">
+            <div class="tab-code">
+                <code>
+                    <span>import &#123; WloButtonComponent &#125; from '&#64;wlo-ui/button';</span><br><br>
+                    <span>&lt;wlo-button variant="primary" label="Primary"&gt;&lt;/wlo-button&gt;</span> 
+                </code>
+            </div>
+        </mat-tab>
+    </mat-tab-group>
+
+    <div class="section-description examples">
+        <wlo-typography variant="h4" tag="h4" text="Secondary"/>
+    </div>
+    <div class="section-description">
+        <wlo-typography variant="muted" tag="h4" text="A supporting action button.
+        Used for secondary actions that are important but not the main focus. Often appears next to a primary button."/>
+    </div>
+
+    <mat-tab-group>
+        <mat-tab label="Preview" >
+            <div class="tab-preview">
+                <wlo-button
+                    variant="secondary"
+                    label="Secondary"
+                ></wlo-button>
+            </div>
+        </mat-tab>
+        <mat-tab label="Code">
+            <div class="tab-code">
+                <code>
+                    <span>import &#123; WloButtonComponent &#125; from '&#64;wlo-ui/button';</span><br><br>
+                    <span>&lt;wlo-button variant="secondary" label="Secondary"&gt;&lt;/wlo-button&gt;</span> 
+                </code>
+            </div>
+        </mat-tab>
+    </mat-tab-group>
+
+    <div class="section-description examples">
+        <wlo-typography variant="h4" tag="h4" text="Danger"/>
+    </div>
+
+    <div class="section-description">
+        <wlo-typography variant="muted" tag="h4" text="Indicates a destructive or irreversible action.
+        Ideal for delete, remove, or critical actions that need user attention. Use with caution."/>
+    </div>
+
+    <mat-tab-group>
+        <mat-tab label="Preview" >
+            <div class="tab-preview">
+                <wlo-button
+                    variant="danger"
+                    label="Danger"
+                ></wlo-button>
+            </div>
+        </mat-tab>
+        <mat-tab label="Code">
+            <div class="tab-code">
+                <code>
+                    <span>import &#123; WloButtonComponent &#125; from '&#64;wlo-ui/button';</span><br><br>
+                    <span>&lt;wlo-button variant="danger" label="Danger"&gt;&lt;/wlo-button&gt;</span> 
+                </code>
+            </div>
+        </mat-tab>
+    </mat-tab-group>
+
+    <div class="section-description examples">
+        <wlo-typography variant="h4" tag="h4" text="Outline"/>
+    </div>
+    <div class="section-description">
+        <wlo-typography variant="muted" tag="h4" text="A neutral, less prominent action.
+        Great for secondary or alternative actions, especially when paired with a filled button like primary or danger. Looks clean and minimal."/>
+    </div>
+
+    <mat-tab-group>
+        <mat-tab label="Preview" >
+            <div class="tab-preview">
+                <wlo-button
+                    variant="outline"
+                    label="Outline"
+                ></wlo-button>
+            </div>
+        </mat-tab>
+        <mat-tab label="Code">
+            <div class="tab-code">
+                <code>
+                    <span>import &#123; WloButtonComponent &#125; from '&#64;wlo-ui/button';</span><br><br>
+                    <span>&lt;wlo-button variant="outline" label="Outline"&gt;&lt;/wlo-button&gt;</span> 
+                </code>
+            </div>
+        </mat-tab>
+    </mat-tab-group>
+
+    <div class="section-description examples">
+        <wlo-typography variant="h4" tag="h4" text="Ghost"/>
+    </div>
+    <div class="section-description">
+        <wlo-typography variant="muted" tag="h4" text="Minimal style button with transparent background.
+        Perfect for subtle actions, like “Learn more”, or in places where too many solid buttons would create visual noise."/>
+    </div>
+
+    <mat-tab-group>
+        <mat-tab label="Preview" >
+            <div class="tab-preview">
+                <wlo-button
+                    variant="ghost"
+                    label="Ghost"
+                ></wlo-button>
+            </div>
+        </mat-tab>
+        <mat-tab label="Code">
+            <div class="tab-code">
+                <code>
+                    <span>import &#123; WloButtonComponent &#125; from '&#64;wlo-ui/button';</span><br><br>
+                    <span>&lt;wlo-button variant="ghost" label="Ghost"&gt;&lt;/wlo-button&gt;</span> 
+                </code>
+            </div>
+        </mat-tab>
+    </mat-tab-group>
+
+    <div class="section-description examples">
+        <wlo-typography variant="h4" tag="h4" text="Link"/>
+    </div>
+    <div class="section-description">
+        <wlo-typography variant="muted" tag="h4" text="Styled like a hyperlink.
+        Use when the button’s purpose is to navigate, redirect, or resemble textual links within content areas."/>
+    </div>
+
+    <mat-tab-group>
+        <mat-tab label="Preview" >
+            <div class="tab-preview">
+                <wlo-button
+                    variant="link"
+                    label="Link"
+                ></wlo-button>
+            </div>
+        </mat-tab>
+        <mat-tab label="Code">
+            <div class="tab-code">
+                <code>
+                    <span>import &#123; WloButtonComponent &#125; from '&#64;wlo-ui/button';</span><br><br>
+                    <span>&lt;wlo-button variant="link" label="Link"&gt;&lt;/wlo-button&gt;</span> 
+                </code>
+            </div>
+        </mat-tab>
+    </mat-tab-group>
+
+    <div class="section-description examples">
+        <wlo-typography variant="h4" tag="h4" text="Icon"/>
+    </div>
+    <div class="section-description">
+        <wlo-typography variant="muted" tag="h4" text="A button that shows only an icon.
+        Use when space is limited or when the action is clearly understood through the icon alone. Can be combined with any variant, just set iconOnly to true."/>
+    </div>
+
+    <mat-tab-group>
+        <mat-tab label="Preview" >
+            <div class="tab-preview">
+                <wlo-button
+                    variant="ghost"
+                    [iconOnly]="true"
+                    icon="done"
+                ></wlo-button>
+            </div>
+        </mat-tab>
+        <mat-tab label="Code">
+            <div class="tab-code">
+                <code>
+                    <span>import &#123; WloButtonComponent &#125; from '&#64;wlo-ui/button';</span><br><br>
+                    <span>&lt;wlo-button variant="ghost" [iconOnly]="true" icon="done"&gt;&lt;/wlo-button&gt;</span> 
+                </code>
+            </div>
+        </mat-tab>
+    </mat-tab-group>
+
+    <div class="section-description examples">
+        <wlo-typography variant="h4" tag="h4" text="With Icon"/>
+    </div>
+    <div class="section-description">
+        <wlo-typography variant="muted" tag="h4" text="A button that displays an icon alongside a label.
+        Use to improve visual recognition of the action. Icons can be placed next to text in any variant to make the intent more intuitive."/>
+    </div>
+
+    <mat-tab-group>
+        <mat-tab label="Preview" >
+            <div class="tab-preview">
+                <wlo-button
+                    variant="primary"
+                    label="Login with Email"
+                    icon="email"
+                ></wlo-button>
+            </div>
+        </mat-tab>
+        <mat-tab label="Code">
+            <div class="tab-code">
+                <code>
+                    <span>import &#123; WloButtonComponent &#125; from '&#64;wlo-ui/button';</span><br><br>
+                    <span>&lt;wlo-button variant="primary" label="Login with Email" icon="email"&gt;&lt;/wlo-button&gt;</span> 
+                </code>
+            </div>
+        </mat-tab>
+    </mat-tab-group>
+
+    <div class="section-description examples">
+        <wlo-typography variant="h4" tag="h4" text="Loading"/>
+    </div>
+    <div class="section-description">
+        <wlo-typography variant="muted" tag="h4" text="Represents a loading or processing state.
+        Use loading=true when waiting for an async operation. The label is replaced with a spinner and feedback like “Please wait”."/>
+    </div>
+
+    <mat-tab-group>
+        <mat-tab label="Preview" >
+            <div class="tab-preview">
+                <wlo-button
+                    variant="primary"
+                    [loading]="true"
+                ></wlo-button>
+            </div>
+        </mat-tab>
+        <mat-tab label="Code">
+            <div class="tab-code">
+                <code>
+                    <span>import &#123; WloButtonComponent &#125; from '&#64;wlo-ui/button';</span><br><br>
+                    <span>&lt;wlo-button variant="primary" label="Login with Email" icon="email"&gt;&lt;/wlo-button&gt;</span> 
+                </code>
+            </div>
+        </mat-tab>
+    </mat-tab-group>
+
+</section>
