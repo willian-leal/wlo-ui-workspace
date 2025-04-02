@@ -1,0 +1,150 @@
+@import '../../styles/variables';
+
+.wlo-btn {
+  @include flex-center;
+  font-family: $font-family-base;
+  font-weight: $font-weight-medium;
+  border-radius: $radius-md;
+  padding: $space-sm $space-md;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 40px;
+
+  // Botões principais
+  &--primary, &--with-icon {
+    background-color: var(--color-button-bg);
+    color: var(--color-button-text);
+
+    &:hover {
+      background-color: var(--color-button-hover-bg);
+    }
+  }
+
+  // Secundário
+  &--secondary {
+    background-color: var(--color-secondary);
+    color: var(--color-text);
+
+    &:hover {
+      background-color: var(--color-hover);
+    }
+  }
+
+  // Perigo
+  &--danger {
+    background-color: $red-500;
+    color: $white;
+
+    &:hover {
+      background-color: $red-600;
+    }
+  }
+
+  // Outline
+  &--outline {
+    background-color: transparent;
+    border: 1px solid var(--color-border);
+    color: var(--color-text);
+
+    &:hover {
+      background-color: var(--color-hover);
+    }
+  }
+
+  // Fantasma (ghost)
+  &--ghost {
+    background-color: transparent;
+    color: var(--color-text);
+
+    &:hover {
+      background-color: var(--color-hover);
+    }
+  }
+
+  // Link
+  &--link {
+    background: none;
+    color: var(--color-text);
+    padding: 0;
+
+    &:hover {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+  }
+
+  // Botão só com ícone
+  &--icon {
+    padding: $space-sm;
+    height: 2.5rem;
+  }
+
+  // Tamanhos
+  &--sm {
+    font-size: $font-size-sm;
+    padding: $space-xs $space-sm;
+  }
+
+  &--md {
+    font-size: $font-size-md;
+    padding: $space-sm $space-md;
+  }
+
+  &--lg {
+    font-size: $font-size-lg;
+    padding: $space-md $space-lg;
+  }
+
+  // Estados
+  &--loading {
+    opacity: 0.6;
+    pointer-events: none;
+  }
+
+  &--disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  .wlo-btn__content {
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  // Aplica o gap somente se não for icon-only
+  .wlo-btn__content {
+    gap: 10px;
+  }
+
+  // Ícone carregando
+  .wlo-btn__spinner {
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid var(--color-button-text);
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.9s linear infinite;
+    display: inline-block;
+    margin-right: $space-md;
+    vertical-align: middle;
+  }
+
+  .wlo-btn i,
+  .wlo-btn svg,
+  .wlo-btn__icon {
+    display: inline-flex;
+    vertical-align: middle;
+  }
+
+  .wlo-btn__icon-img {
+    width: 25px;
+    height: 25px;
+  }
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}

@@ -1,0 +1,44 @@
+<ng-container *ngIf="href; else buttonTemplate">
+  <a
+    [href]="href"
+    target="_blank"
+    rel="noopener noreferrer"
+    [ngClass]="classes"
+    [attr.aria-disabled]="disabled || loading"
+    class="wlo-btn"
+    (click)="handleClick($event)"
+  >
+    <ng-container *ngTemplateOutlet="contentTemplate"></ng-container>
+  </a>
+</ng-container>
+
+<ng-template #buttonTemplate>
+  <button
+    [attr.type]="type"
+    [disabled]="disabled || loading"
+    [ngClass]="classes"
+    (click)="handleClick($event)"
+  >
+    <ng-container *ngTemplateOutlet="contentTemplate"></ng-container>
+  </button>
+</ng-template>
+
+<ng-template #contentTemplate>
+  <ng-container *ngIf="loading">
+    <span class="wlo-btn__spinner" aria-hidden="true"></span>
+    <span>Please wait</span>
+  </ng-container>
+
+  <ng-container *ngIf="!loading">
+    <div class="wlo-btn__content">
+      <ng-container *ngIf="iconSrc">
+        <img [src]="iconSrc" alt="icon" class="wlo-btn__icon-img" />
+      </ng-container>
+      <ng-container *ngIf="icon && !iconSrc">
+        <i class="material-icons wlo-btn__icon">{{ icon }}</i>
+      </ng-container>
+      <ng-content></ng-content>
+      <span *ngIf="shouldShowLabel">{{ label }}</span>
+    </div>
+  </ng-container>
+</ng-template>
