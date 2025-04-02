@@ -1,0 +1,52 @@
+@use 'sass:map';
+@import './colors';
+
+// Tema claro
+$light-theme: (
+  bg: $white,
+  text: $slate-900,
+  primary: $slate-900,
+  secondary: $slate-100,
+  muted: $slate-500,
+  border: $slate-200,
+  hover: $slate-50,
+
+  // Botões
+  button-text: $white,
+  button-bg: $slate-900,
+  button-hover-bg: $slate-700
+);
+
+// Tema escuro
+$dark-theme: (
+  bg: $black,
+  text: $neutral-50,
+  primary: $neutral-50,
+  secondary: $neutral-800,
+  muted: $neutral-400,
+  border: $neutral-700,
+  hover: $neutral-850,
+
+  // Botões
+  button-text: $slate-900,
+  button-bg: $slate-50,
+  button-hover-bg: $slate-200
+);
+
+// Mixin que gera as variáveis CSS
+@mixin generate-theme($theme-map) {
+  @each $key, $value in $theme-map {
+    --color-#{$key}: #{$value};
+  }
+}
+
+// Aplica tema claro por padrão
+:root {
+  @include generate-theme($light-theme);
+}
+
+// Aplica tema escuro com body[data-theme="dark"]
+body[data-theme='dark'] {
+  @include generate-theme($dark-theme);
+  color-scheme: dark;
+}

@@ -1,0 +1,93 @@
+@import 'variables';
+@import 'themes'; // agora importa o tema com variáveis CSS
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-md;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  line-height: 1.5;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-sm {
+  font-size: $font-size-sm;
+}
+
+.text-md {
+  font-size: $font-size-md;
+}
+
+.text-lg {
+  font-size: $font-size-lg;
+}
+
+.mt-sm {
+  margin-top: $space-sm;
+}
+
+.mt-md {
+  margin-top: $space-md;
+}
+
+.mt-lg {
+  margin-top: $space-lg;
+}
+
+.p-sm {
+  padding: $space-sm;
+}
+
+.rounded {
+  border-radius: $radius-md;
+}
+
+// Títulos herdando a cor do tema
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-base;
+  font-weight: $font-weight-bold;
+  color: var(--color-text);
+}
+
+h1 {
+  font-size: $font-size-h1;
+  line-height: $line-height-tight;
+}
+
+h2 {
+  font-size: $font-size-h2;
+  line-height: $line-height-tight;
+}
+
+h3 {
+  font-size: $font-size-h3;
+  line-height: $line-height-normal;
+}
+
+p {
+  font-size: $font-size-body;
+  line-height: $line-height-normal;
+  margin-bottom: $space-sm;
+  color: var(--color-text);
+}
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
