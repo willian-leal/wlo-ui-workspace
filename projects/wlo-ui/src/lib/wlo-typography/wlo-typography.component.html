@@ -1,0 +1,17 @@
+<ng-container [ngSwitch]="tag">
+    <h1 *ngSwitchCase="'h1'" [ngClass]="classes" [innerHTML]="text"></h1>
+    <h2 *ngSwitchCase="'h2'" [ngClass]="classes" [innerHTML]="text"></h2>
+    <h3 *ngSwitchCase="'h3'" [ngClass]="classes" [innerHTML]="text"></h3>
+    <h4 *ngSwitchCase="'h4'" [ngClass]="classes" [innerHTML]="text"></h4>
+    <p *ngSwitchCase="'p'" [ngClass]="classes" [innerHTML]="text"></p>
+    <blockquote *ngSwitchCase="'blockquote'" [ngClass]="classes" [innerHTML]="text"></blockquote>
+    <table *ngSwitchCase="'table'" [ngClass]="classes" [innerHTML]="text"></table>
+    <ul *ngSwitchCase="'ul'" [ngClass]="classes" [innerHTML]="text"></ul>
+    <code *ngSwitchCase="'code'" [ngClass]="classes" [innerHTML]="text"></code>
+    <span *ngSwitchCase="'span'" [ngClass]="classes" [innerHTML]="text"></span>
+    <small *ngSwitchCase="'small'" [ngClass]="classes" [innerHTML]="text"></small>
+  
+    <!-- fallback -->
+    <span *ngSwitchDefault [ngClass]="classes" [innerHTML]="text"></span>
+</ng-container>
+  

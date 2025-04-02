@@ -1,0 +1,102 @@
+@import '../../styles/variables';
+
+.wlo-typography {
+  display: inline-block;
+  font-family: $font-family-base;
+  color: var(--color-text);
+  margin: 0;
+
+  &--h1 {
+    font-size: $font-size-h1;
+    font-weight: $font-weight-bold;
+    line-height: $line-height-tight;
+  }
+
+  &--h2 {
+    font-size: $font-size-h2;
+    font-weight: $font-weight-bold;
+    line-height: $line-height-tight;
+  }
+
+  &--h3 {
+    font-size: $font-size-h3;
+    font-weight: $font-weight-medium;
+    line-height: $line-height-normal;
+  }
+
+  &--h4 {
+    font-size: $font-size-h4;
+    font-weight: $font-weight-medium;
+    line-height: $line-height-normal;
+  }
+
+  &--p {
+    font-size: $font-size-body;
+    font-weight: $font-weight-normal;
+    line-height: $line-height-normal;
+    margin-bottom: $space-sm;
+  }
+
+  &--lead {
+    font-size: $font-size-lg;
+    font-weight: $font-weight-medium;
+    line-height: $line-height-normal;
+  }
+
+  &--large {
+    font-size: $font-size-h3;
+    font-weight: $font-weight-normal;
+  }
+
+  &--small {
+    font-size: $font-size-sm;
+    font-weight: $font-weight-normal;
+  }
+
+  &--muted {
+    font-size: $font-size-body;
+    color: var(--color-muted);
+  }
+
+  &--blockquote {
+    padding-left: $space-md;
+    border-left: 4px solid var(--color-border);
+    color: var(--color-muted);
+    font-style: italic;
+    margin: $space-md 0;
+  }
+
+  &--table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: $font-size-sm;
+
+    th, td {
+      padding: $space-sm;
+      border: 1px solid var(--color-border);
+      text-align: left;
+    }
+
+    th {
+      font-weight: $font-weight-bold;
+      background-color: var(--color-secondary);
+    }
+  }
+
+  &--list {
+    padding-left: $space-lg;
+    font-size: $font-size-body;
+
+    li {
+      margin-bottom: $space-xs;
+    }
+  }
+
+  &--code {
+    font-family: monospace;
+    background-color: var(--color-border);
+    padding: 0.2rem 0.4rem;
+    font-size: $font-size-sm;
+    border-radius: $radius-sm;
+  }
+}
