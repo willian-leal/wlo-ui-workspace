@@ -1,0 +1,34 @@
+<main class="layout">
+    <nav class="container top-nav">
+      <div class="icons-left-side">
+        <wlo-button
+          variant="ghost"
+          icon="menu"
+        ></wlo-button>
+      </div>
+        <div class="cno icons-right-side">
+          <wlo-button
+            type="button"
+            variant="ghost"
+            href="https://www.linkedin.com/in/willian-leal-de-oliveira-0aab05192/?original_referer=https%3A%2F%2Fwww%2Egoogle%2Ecom%2F&originalSubdomain=br"
+            [iconSrc]="isDarkMode ? 'assets/github-mark-white.png' : 'assets/github-mark.png'"
+          ></wlo-button>
+          <wlo-button
+            variant="ghost"
+            [icon]="isDarkMode ? 'light_mode' : 'dark_mode'"
+            (click)="toggleTheme()"
+          ></wlo-button>
+        </div>
+    </nav>
+    <!-- <aside class="sidebar">
+      <nav>
+        <a routerLink="/wlo-typography">Typography</a>
+        <a routerLink="/wlo-button">Button</a>
+      </nav>
+    </aside> -->
+  
+    <section class="content">
+      <router-outlet />
+    </section>
+</main>
+  
