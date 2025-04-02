@@ -3,5 +3,143 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "wlo-ui": {
+      "projectType": "library",
+      "root": "projects/wlo-ui",
+      "sourceRoot": "projects/wlo-ui/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/wlo-ui/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/wlo-ui/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/wlo-ui/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-builders/jest:run",
+          "options": {
+            "tsConfig": "projects/wlo-ui/tsconfig.spec.json"
+          }
+        }
+      }
+    },
+    "wlo-ui-demo": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/wlo-ui-demo",
+      "sourceRoot": "projects/wlo-ui-demo/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/wlo-ui-demo",
+            "index": "projects/wlo-ui-demo/src/index.html",
+            "browser": "projects/wlo-ui-demo/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projects/wlo-ui-demo/tsconfig.app.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/wlo-ui-demo/src/assets",
+                "output": "assets"
+              },
+              {
+                "glob": "**/*",
+                "input": "projects/wlo-ui-demo/public",
+                "output": "/"
+              }
+            ],
+            "styles": [
+              "projects/wlo-ui-demo/src/styles.css"
+            ],
+            "scripts": [],
+            "server": "projects/wlo-ui-demo/src/main.server.ts",
+            "outputMode": "server",
+            "ssr": {
+              "entry": "projects/wlo-ui-demo/src/server.ts"
+            },
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "projects/wlo-ui/src/styles"
+              ]
+            }
+          },
+
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "4kB",
+                  "maximumError": "8kB"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "wlo-ui-demo:build:production"
+            },
+            "development": {
+              "buildTarget": "wlo-ui-demo:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/wlo-ui-demo/tsconfig.spec.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/wlo-ui-demo/public"
+              }
+            ],
+            "styles": [
+              "projects/wlo-ui-demo/src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "analytics": false
   }
 }

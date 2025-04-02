@@ -16,7 +16,11 @@
     "moduleResolution": "bundler",
     "importHelpers": true,
     "target": "ES2022",
-    "module": "ES2022"
+    "module": "ES2022",
+    "paths": {
+      "wlo-ui": ["./projects/wlo-ui/src/public-api"],
+      "@wlo/*": ["./projects/wlo-ui/src/lib/*"]
+  }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
