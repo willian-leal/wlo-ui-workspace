@@ -22,4 +22,7 @@
 .icons-left-side {
     display: flex;
     align-items: center;
+    .wlo-logo {
+        cursor: pointer;
+    }
 }

@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { ThemeService } from '@wlo/theme/theme.service';
 import { WloButtonComponent, WloTypographyComponent } from 'wlo-ui';
 
 @Component({
   selector: 'app-layout',
-  imports: [RouterOutlet, WloButtonComponent, WloTypographyComponent],
+  imports: [RouterOutlet, RouterLink, WloButtonComponent, WloTypographyComponent],
   templateUrl: './layout.component.html',
   styleUrls: ['./layout.component.scss']
 })
