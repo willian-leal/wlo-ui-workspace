@@ -1,0 +1,15 @@
+.components {
+    .components-header {
+        margin-top: 20px
+    }
+    .components-description, .component-info {
+        margin: 10px 0;
+    }
+
+    .components-list {
+        margin-top: 40px;
+        .component-item {
+            margin-bottom: 40px;
+        }
+    }
+}
