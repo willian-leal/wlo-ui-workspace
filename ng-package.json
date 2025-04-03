@@ -1,0 +1,14 @@
+{
+    "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+    "dest": "../../dist/wlo-ui",
+    "lib": {
+      "entryFile": "src/public-api.ts",
+      "styleIncludePaths": [
+        "src/styles"
+      ]
+    },
+    "whitelistedNonPeerDependencies": [
+      "@angular/common",
+      "@angular/core"
+    ]
+  }
