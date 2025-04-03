@@ -11,6 +11,10 @@ export const routes: Routes = [
         loadComponent: () => import('./pages/home/home.component').then(m => m.HomeComponent)
     },
     {
+        path: 'wlo-components',
+        loadComponent: () => import('./pages/components/components.component').then(m => m.ComponentsComponent)
+    },
+    {
         path: 'wlo-typography',
         loadComponent: () => import('./components-showcase/typography/typography-showcase.component').then(m => m.TypographyShowcaseComponent)
     },
