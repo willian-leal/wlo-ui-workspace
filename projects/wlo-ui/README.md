@@ -1,63 +1,125 @@
-# WloUi
+# WLO UI
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.0.
+**WLO UI** is a modern and customizable component library for Angular, designed to accelerate development and ensure consistency across applications. Built with SCSS, it supports light and dark themes, provides reusable tokens, and encourages scalability.
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Installation
 
 ```bash
-ng generate component component-name
+npm install wlo-ui
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Setup
 
-```bash
-ng generate --help
+### 1. Configure Global Styles
+
+In your `angular.json`, make sure to include the `styles` and `stylePreprocessorOptions` pointing to the SCSS variables and theme files:
+
+```json
+"styles": [
+  "src/styles.scss"
+],
+"stylePreprocessorOptions": {
+  "includePaths": [
+    "node_modules/wlo-ui/styles"
+  ]
+}
 ```
 
-## Building
+### 2. Import Component
 
-To build the library, run:
+Each component is standalone and can be imported individually:
 
-```bash
-ng build wlo-ui
+```ts
+import { WloButtonComponent } from 'wlo-ui';
 ```
 
-This command will compile your project, and the build artifacts will be placed in the `dist/` directory.
+In your template:
 
-### Publishing the Library
-
-Once the project is built, you can publish your library by following these steps:
-
-1. Navigate to the `dist` directory:
-   ```bash
-   cd dist/wlo-ui
-   ```
-
-2. Run the `npm publish` command to publish your library to the npm registry:
-   ```bash
-   npm publish
-   ```
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
+```html
+<wlo-button
+  variant="primary"
+  label="Click me"
+  (clicked)="onClick()"
+></wlo-button>
 ```
 
-## Running end-to-end tests
+## Theming
 
-For end-to-end (e2e) testing, run:
+WLO UI supports **light** and **dark** themes using CSS variables and SCSS maps. Themes are automatically injected using a `ThemeService`, and theme switching is done by toggling the `data-theme` attribute on the `<body>` tag:
 
-```bash
-ng e2e
+```ts
+themeService.setTheme('light'); // or 'dark'
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+### Custom Properties
 
-## Additional Resources
+The following CSS variables are available for styling:
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+```scss
+--color-bg
+--color-text
+--color-primary
+--color-secondary
+--color-muted
+--color-border
+--color-hover
+
+--color-button-text
+--color-button-bg
+--color-button-hover-bg
+```
+
+## Components
+
+### Button
+
+A flexible button component that supports:
+
+- Variants: `primary`, `secondary`, `outline`, `ghost`, `link`, `danger`, `icon`
+- Sizes: `sm`, `md`, `lg`, `icon`
+- States: `loading`, `disabled`
+- Icons (via Material Icons or custom image source)
+- Click output: `(clicked)="handler()"`
+
+```html
+<wlo-button
+  variant="outline"
+  size="md"
+  label="Submit"
+  icon="check"
+  [loading]="false"
+  (clicked)="onSubmit()"
+></wlo-button>
+```
+
+### Typography
+
+Use `wlo-typography` to standardize text elements with variants such as:
+
+- `h1`, `h2`, `h3`, `h4`
+- `p`, `lead`, `muted`, `large`, `small`
+- `blockquote`, `list`, `code`
+
+```html
+<wlo-typography tag="h2" variant="h2" text="Section title" />
+```
+
+## Structure and Style Tokens
+
+The library exposes a SCSS structure with design tokens, including:
+
+- Spacing (`$space-sm`, `$space-md`, etc.)
+- Font sizes and weights
+- Border radius (`$radius-sm`, `$radius-md`)
+- Color scales (slate, gray, red)
+
+## Roadmap
+
+- Input and form controls
+- Modal and toast components
+- Responsive grid system
+- Accessibility improvements
+
+## License
+
+MIT
