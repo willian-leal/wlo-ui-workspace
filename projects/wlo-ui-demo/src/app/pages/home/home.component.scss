@@ -1,4 +1,4 @@
-@import 'variables';
+@import '../../../../../wlo-ui/src/styles/variables';
 
 .home {
   text-align: center;
@@ -43,11 +43,7 @@
     }
   }
 
-  &__preview {
-    margin-top: 60px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+  .section-subtitle {
+    margin-top: 40px;
   }
 }

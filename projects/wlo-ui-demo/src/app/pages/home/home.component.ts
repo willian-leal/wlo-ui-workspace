@@ -6,7 +6,7 @@ import { RouterLink } from '@angular/router';
 @Component({
   standalone: true,
   selector: 'app-home',
-  imports: [MatTabsModule, RouterLink],
+  imports: [MatTabsModule, RouterLink, WloTypographyComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })

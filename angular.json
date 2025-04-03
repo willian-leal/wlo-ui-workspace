@@ -39,6 +39,41 @@
       "sourceRoot": "projects/wlo-ui-demo/src",
       "prefix": "app",
       "architect": {
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/wlo-ui-demo/server",
+            "main": "projects/wlo-ui-demo/src/main.server.ts",
+            "tsConfig": "projects/wlo-ui-demo/tsconfig.server.json"
+          },
+          "configurations": {
+            "production": {
+              "outputHashing": "media",
+              "sourceMap": false,
+              "optimization": true
+            },
+            "development": {
+              "sourceMap": true,
+              "optimization": false,
+              "outputHashing": "none"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve-ssr": {
+          "builder": "@angular-devkit/build-angular:ssr-dev-server",
+          "configurations": {
+            "development": {
+              "browserTarget": "wlo-ui-demo:build:development",
+              "serverTarget": "wlo-ui-demo:server:development"
+            },
+            "production": {
+              "browserTarget": "wlo-ui-demo:build:production",
+              "serverTarget": "wlo-ui-demo:server:production"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
@@ -65,18 +100,12 @@
               "projects/wlo-ui-demo/src/styles.css"
             ],
             "scripts": [],
-            "server": "projects/wlo-ui-demo/src/main.server.ts",
-            "outputMode": "server",
-            "ssr": {
-              "entry": "projects/wlo-ui-demo/src/server.ts"
-            },
             "stylePreprocessorOptions": {
               "includePaths": [
                 "projects/wlo-ui/src/styles"
               ]
             }
           },
-
           "configurations": {
             "production": {
               "budgets": [
