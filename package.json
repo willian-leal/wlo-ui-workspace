@@ -5,9 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "build:ssr": "ng build wlo-ui-demo && ng run wlo-ui-demo:server:production",
-    "serve:ssr": "node dist/wlo-ui-demo/server/main.js"
+    "watch": "ng build --watch --configuration development"
   },
   "private": true,
   "dependencies": {

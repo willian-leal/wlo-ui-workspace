@@ -1,19 +1,5 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "projects/wlo-ui-demo/server.ts",
-      "use": "@vercel/node"
-    },
-    {
-      "src": "projects/wlo-ui-demo/src/main.ts",
-      "use": "@vercel/angular"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "projects/wlo-ui-demo/server.ts"
-    }
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
