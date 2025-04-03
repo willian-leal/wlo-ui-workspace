@@ -1,0 +1,52 @@
+@import 'variables';
+
+.home {
+  text-align: center;
+  padding: 60px 20px;
+
+  &__title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--color-text);
+  }
+
+  &__subtitle {
+    font-size: 1.25rem;
+    margin-top: 1rem;
+    color: var(--color-muted);
+  }
+
+  &__actions {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+
+    .home__btn {
+      padding: 0.75rem 1.5rem;
+      border-radius: $radius-md;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      background-color: var(--color-primary);
+      color: var(--color-button-text);
+
+      &.secondary {
+        background-color: var(--color-border);
+        color: var(--color-text);
+      }
+
+      &:hover {
+        background-color: var(--color-hover);
+      }
+    }
+  }
+
+  &__preview {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+}
