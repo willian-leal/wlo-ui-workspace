@@ -1,27 +1,32 @@
 @import '../../../../wlo-ui/src/styles/variables';
 
-.top-nav {
+.layout {
     width: 100%;
-    height: 55px;
-    // max-width: 1400px;
-    margin-left: auto;
-    margin-right: auto;
     border-bottom: 1px dashed $gray-600;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: auto;
-}
 
-.icons-right-side {
-    display: flex;
-    align-items: center;
-}
 
-.icons-left-side {
-    display: flex;
-    align-items: center;
-    .wlo-logo {
-        cursor: pointer;
+    .top-nav {
+        height: 55px;
+        // max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: auto;
+    }
+    
+    .icons-right-side {
+        display: flex;
+        align-items: center;
+    }
+    
+    .icons-left-side {
+        display: flex;
+        align-items: center;
+        .wlo-logo {
+            cursor: pointer;
+        }
     }
 }
+
