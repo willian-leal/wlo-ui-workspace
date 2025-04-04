@@ -4,8 +4,14 @@
       <p class="home__subtitle">Build beautiful Angular interfaces with consistent, reusable components.</p>
   
       <div class="home__actions">
-        <a routerLink="/wlo-components" class="home__btn">Explore Components</a>
-        <a href="https://github.com/willian-leal/wlo-ui-workspace/tree/master/projects/wlo-ui" target="_blank" class="home__btn secondary">View on GitHub</a>
+        <wlo-button variant="primary" routerLink="/wlo-components">Explore Components</wlo-button>
+          <wlo-button
+          variant="secondary"
+          [iconSrc]="isDarkMode ? '../../../assets/github-mark-white.png' : '../../../assets/github-mark-black.png'"
+          href="https://github.com/willian-leal/wlo-ui-workspace/tree/master/projects/wlo-ui"
+          target="_blank" 
+          >View on GitHub
+        </wlo-button>
       </div>
     </div>
   
@@ -18,9 +24,6 @@
 
     <div class="tab-code installation">
       <wlo-typography variant="code" tag="code" text="npm i wlo-ui" />
-        <!-- <code>
-            <span>npx wlo-ui&#64;latest add button</span>
-        </code> -->
     </div>
 </section>
   

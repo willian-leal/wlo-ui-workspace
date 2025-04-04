@@ -22,25 +22,26 @@
     gap: 1rem;
     justify-content: center;
 
-    .home__btn {
-      padding: 0.75rem 1.5rem;
-      border-radius: $radius-md;
-      text-decoration: none;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      background-color: var(--color-primary);
-      color: var(--color-button-text);
+    // .home__btn {
+    //   // padding: 0.75rem 1.5rem;
+    //   border-radius: $radius-md;
+    //   text-decoration: none;
+    //   font-weight: 600;
+    //   transition: all 0.3s ease;
+    //   background-color: var(--color-primary);
+    //   color: var(--color-button-text);
+    //   max-height: 64px;
 
-      &.secondary {
-        background-color: var(--color-border);
-        color: var(--color-text);
-      }
+    //   &.secondary {
+    //     background-color: var(--color-border);
+    //     color: var(--color-text);
+    //   }
 
-      &:hover {
-        background-color: var(--color-hover);
-        color: var(--color-text);
-      }
-    }
+    //   &:hover {
+    //     background-color: var(--color-hover);
+    //     color: var(--color-text);
+    //   }
+    // }
   }
 
   .section-subtitle {
