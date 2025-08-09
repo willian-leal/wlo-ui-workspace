@@ -1,9 +1,9 @@
-@import 'colors';
-@import 'spacing';
-@import 'typography';
-@import 'radius';
-@import 'shadows';
-@import 'zindex';
-@import 'breakpoints';
-@import 'mixins';
-@import 'themes';
+@forward 'colors';
+@forward 'spacing';
+@forward 'typography';
+@forward 'radius';
+@forward 'shadows';
+@forward 'zindex';
+@forward 'breakpoints';
+@forward 'mixins';
+// @forward 'themes';

@@ -1,5 +1,6 @@
-@import './variables';
-@import 'themes'; // agora importa o tema com variáveis CSS
+@forward './variables';
+@use './variables' as *;
+@use './themes';
 
 *,
 *::before,
