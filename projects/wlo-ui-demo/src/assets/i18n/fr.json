@@ -14,6 +14,7 @@
 	"wlo-ui-demo.layout.langMenu.languages.pt": "Portugais",
 	"wlo-ui-demo.layout.langMenu.languages.ru": "Russe",
 	"wlo-ui-demo.layout.langMenu.languages.zh": "Chinois",
+	"wlo-ui-demo.layout.langMenu.title": "Langue",
 	"wlo-ui-demo.page.button.code": "Code",
 	"wlo-ui-demo.page.button.danger.description": "Indique une action destructive ou irréversible. Idéal pour les actions de suppression, de retrait ou critiques nécessitant l'attention de l'utilisateur. À utiliser avec précaution.",
 	"wlo-ui-demo.page.button.danger.previewLabel": "Danger",

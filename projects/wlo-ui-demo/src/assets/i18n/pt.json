@@ -14,6 +14,7 @@
 	"wlo-ui-demo.layout.langMenu.languages.pt": "Português",
 	"wlo-ui-demo.layout.langMenu.languages.ru": "Russo",
 	"wlo-ui-demo.layout.langMenu.languages.zh": "Chinês",
+	"wlo-ui-demo.layout.langMenu.title": "Idioma",
 	"wlo-ui-demo.page.button.code": "Código",
 	"wlo-ui-demo.page.button.danger.description": "Indica uma ação destrutiva ou irreversível. Ideal para ações de eliminação, remoção ou ações críticas que exijam a atenção do utilizador. Usar com cautela.",
 	"wlo-ui-demo.page.button.danger.previewLabel": "Perigo",

@@ -14,6 +14,7 @@
 	"wlo-ui-demo.layout.langMenu.languages.pt": "ポルトガル語",
 	"wlo-ui-demo.layout.langMenu.languages.ru": "ロシア",
 	"wlo-ui-demo.layout.langMenu.languages.zh": "中国語",
+	"wlo-ui-demo.layout.langMenu.title": "言語",
 	"wlo-ui-demo.page.button.code": "コード",
 	"wlo-ui-demo.page.button.danger.description": "破壊的または不可逆的なアクションを示します。削除、除去、またはユーザーの注意を必要とする重要なアクションに最適です。注意して使用してください。",
 	"wlo-ui-demo.page.button.danger.previewLabel": "危険",
