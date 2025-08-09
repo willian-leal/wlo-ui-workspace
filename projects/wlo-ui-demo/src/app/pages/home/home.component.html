@@ -1,22 +1,22 @@
 <section class="container home">
     <div class="home__intro">
       <h1 class="home__title">wlo-ui</h1>
-      <p class="home__subtitle">Build beautiful Angular interfaces with consistent, reusable components.</p>
+      <p class="home__subtitle">{{ 'wlo-ui-demo.page.home.subtitle' | translate }}</p>
   
       <div class="home__actions">
-        <wlo-button variant="primary" routerLink="/wlo-components">Explore Components</wlo-button>
+        <wlo-button variant="primary" routerLink="/wlo-components">{{ 'wlo-ui-demo.button.exploreComponents' | translate}}</wlo-button>
           <wlo-button
           variant="secondary"
           [iconSrc]="isDarkMode ? '../../../assets/github-mark-white.png' : '../../../assets/github-mark.png'"
           href="https://github.com/willian-leal/wlo-ui-workspace/tree/master/projects/wlo-ui"
           target="_blank" 
-          >View on GitHub
+          >{{ 'wlo-ui-demo.button.viewOnGithub' | translate }}
         </wlo-button>
       </div>
     </div>
   
     <div class="section-subtitle">
-      <wlo-typography variant="h2" tag="h2" text="Installation"/>
+      <wlo-typography variant="h2" tag="h2" [text]="'wlo-ui-demo.page.home.installation' | translate"/>
     </div>
     <div class="section-description">
         <wlo-typography variant="p" tag="h3" text="npm"/>

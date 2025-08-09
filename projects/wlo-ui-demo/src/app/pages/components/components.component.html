@@ -3,13 +3,13 @@
       <wlo-typography
         tag="h1"
         variant="h1"
-        text="Component Library"
+        [text]="'wlo-ui-demo.page.components.pageTitle' | translate"
       />
       <div class="component-info">
         <wlo-typography
           tag="p"
           variant="muted"
-          text="Explore reusable UI components built for scalability, customization, and theme consistency."
+          [text]="'wlo-ui-demo.page.components.pageDescription' | translate"
         />
       </div>
     </header>
@@ -20,19 +20,19 @@
           <wlo-typography
             variant="h2"
             tag="h2"
-            text="Typography"
+            [text]="'wlo-ui-demo.page.components.typography.title' | translate"
           />
         </div>
         <div class="component-info">
           <wlo-typography
             tag="p"
             variant="muted"
-            text="A set of text elements with predefined styles such as headings, paragraphs, code, and more — all consistent with the theme."
+            [text]="'wlo-ui-demo.page.components.typography.description' | translate"
           />
         </div>
         <wlo-button
           variant="secondary"
-          label="View Typography"
+          [label]="'wlo-ui-demo.page.components.typography.buttonLabel' | translate"
           [routerLink]="['/wlo-typography']"
         ></wlo-button>
       </div>
@@ -42,19 +42,19 @@
           <wlo-typography
             variant="h2"
             tag="h2"
-            text="Button"
+            [text]="'wlo-ui-demo.page.components.button.title' | translate"
           />
         </div>
         <div class="component-info">
           <wlo-typography
             tag="p"
             variant="muted"
-            text="Flexible and theme-aware button component. Includes support for icons, states, sizes and interaction modes."
+            [text]="'wlo-ui-demo.page.components.button.description' | translate"
           />
         </div>
         <wlo-button
           variant="secondary"
-          label="View Button"
+          [label]="'wlo-ui-demo.page.components.button.buttonLabel' | translate"
           [routerLink]="['/wlo-button']"
         ></wlo-button>
       </div>

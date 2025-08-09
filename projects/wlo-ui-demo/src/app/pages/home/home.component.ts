@@ -4,10 +4,12 @@ import {MatTabsModule} from '@angular/material/tabs';
 import { RouterLink } from '@angular/router';
 import { WloUiModule } from "../../../../../wlo-ui/src/lib/wlo-ui.module";
 import { ThemeService } from '@wlo/theme/theme.service';
+import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   standalone: true,
-  imports: [MatTabsModule, RouterLink, WloTypographyComponent, WloUiModule],
+  imports: [MatTabsModule, RouterLink, WloTypographyComponent, WloUiModule, CommonModule, TranslateModule],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })

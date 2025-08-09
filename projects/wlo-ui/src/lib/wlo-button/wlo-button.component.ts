@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { WloButtonSize, WloButtonType, WloButtonVariant } from './wlo-button.types';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'wlo-button',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './wlo-button.component.html',
   styleUrls: ['./wlo-button.component.scss']
 })
@@ -21,18 +22,20 @@ export class WloButtonComponent implements OnInit {
   @Input() href?: string;
   @Input() iconOnly = false;
 
+  constructor(private translate: TranslateService) {}
+
   @Output() clicked = new EventEmitter<void>();
 
   ngOnInit(): void {
     if (this.iconOnly && this.label) {
       console.warn(
-        '[WloButton] Você está usando variant="icon" e também passou label. A label será ignorada.'
+        `[WloButton] ${this.translate.instant('wloButton.warning.iconOnlyWithLabel')}`
       );
     }
   
     if (this.icon && this.iconSrc) {
       console.warn(
-        '[WloButton] Você forneceu ambos icon e iconSrc. Por favor, utilize apenas um deles para evitar inconsistências.'
+        `[WloButton] ${this.translate.instant('wloButton.warning.iconAndIconSrc')}`
       );
     }
   }

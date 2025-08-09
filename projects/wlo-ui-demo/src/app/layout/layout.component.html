@@ -10,6 +10,49 @@
         <wlo-typography class="wlo-logo" variant="h2" tag="h2" text="wlo-ui" [routerLink]="['/home']"/>
       </div>
         <div class="cno icons-right-side">
+          <!-- Botão de idioma -->
+          <wlo-button
+            type="button"
+            variant="ghost"
+            icon="language"
+            [attr.aria-label]="'layout.langButton' | translate"
+            aria-haspopup="menu"
+            [attr.aria-expanded]="langMenuOpen"
+            aria-controls="lang-menu"
+            (click)="toggleLangMenu($event)">
+          </wlo-button>
+
+          <!-- Painel do menu -->
+          @if (langMenuOpen) {
+            <div class="lang-backdrop" (click)="closeLangMenu()"></div>
+            <div
+              id="lang-menu"
+              class="lang-menu"
+              role="menu"
+              tabindex="-1"
+              (keydown.escape)="closeLangMenu()"
+            >
+              <div class="lang-menu__title">{{ 'layout.langMenu.title' | translate }}</div>
+
+              <ul class="lang-menu__list">
+                @for (l of languages; track l.code) {
+                  <li role="none">
+                    <button
+                      role="menuitemradio"
+                      class="lang-item"
+                      [attr.aria-checked]="currentLang === l.code"
+                      (click)="setLang(l.code)"
+                    >
+                      <span class="lang-item__check" aria-hidden="true">
+                        @if (currentLang === l.code) { ✓ }
+                      </span>
+                      <span class="lang-item__label">{{ l.label | translate }}</span>
+                    </button>
+                  </li>
+                }
+              </ul>
+            </div>
+          }
           <wlo-button
             type="button"
             variant="ghost"

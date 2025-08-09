@@ -1,4 +1,4 @@
-<ng-container *ngIf="href; else buttonTemplate">
+@if (href) {
   <a
     [href]="href"
     target="_blank"
@@ -8,37 +8,45 @@
     class="wlo-btn"
     (click)="handleClick($event)"
   >
-    <ng-container *ngTemplateOutlet="contentTemplate"></ng-container>
+    @if (loading) {
+      <span class="wlo-btn__spinner" aria-hidden="true"></span>
+      <span>{{ 'wlo-ui.wloButton.pleaseWait' | translate }}</span>
+    } @else {
+      <div class="wlo-btn__content">
+        @if (iconSrc) {
+          <img [src]="iconSrc" alt="icon" class="wlo-btn__icon-img" />
+        } @else if (icon) {
+          <i class="material-icons wlo-btn__icon">{{ icon }}</i>
+        }
+        <ng-content></ng-content>
+        @if (shouldShowLabel) {
+          <span>{{ label }}</span>
+        }
+      </div>
+    }
   </a>
-</ng-container>
-
-<ng-template #buttonTemplate>
+} @else {
   <button
     [attr.type]="type"
     [disabled]="disabled || loading"
     [ngClass]="classes"
     (click)="handleClick($event)"
   >
-    <ng-container *ngTemplateOutlet="contentTemplate"></ng-container>
+    @if (loading) {
+      <span class="wlo-btn__spinner" aria-hidden="true"></span>
+      <span>{{ 'wlo-ui.wloButton.pleaseWait' | translate }}</span>
+    } @else {
+      <div class="wlo-btn__content">
+        @if (iconSrc) {
+          <img [src]="iconSrc" alt="icon" class="wlo-btn__icon-img" />
+        } @else if (icon) {
+          <i class="material-icons wlo-btn__icon">{{ icon }}</i>
+        }
+        <ng-content></ng-content>
+        @if (shouldShowLabel) {
+          <span>{{ label }}</span>
+        }
+      </div>
+    }
   </button>
-</ng-template>
-
-<ng-template #contentTemplate>
-  <ng-container *ngIf="loading">
-    <span class="wlo-btn__spinner" aria-hidden="true"></span>
-    <span>Please wait</span>
-  </ng-container>
-
-  <ng-container *ngIf="!loading">
-    <div class="wlo-btn__content">
-      <ng-container *ngIf="iconSrc">
-        <img [src]="iconSrc" alt="icon" class="wlo-btn__icon-img" />
-      </ng-container>
-      <ng-container *ngIf="icon && !iconSrc">
-        <i class="material-icons wlo-btn__icon">{{ icon }}</i>
-      </ng-container>
-      <ng-content></ng-content>
-      <span *ngIf="shouldShowLabel">{{ label }}</span>
-    </div>
-  </ng-container>
-</ng-template>
+}

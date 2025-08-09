@@ -1,33 +1,33 @@
 <section class="container section">
   <div class="section-texts">
     <div class="section-title">
-      <wlo-typography variant="h1" tag="h1" text="Typography" />
+      <wlo-typography variant="h1" tag="h1" [text]="'wlo-ui-demo.page.typography.title' | translate" />
     </div>
     <div class="section-description">
       <wlo-typography
         variant="muted"
         tag="p"
-        text="A set of text styles including headings, paragraphs, and utility variants."
+        [text]="'wlo-ui-demo.page.typography.description' | translate"
       />
     </div>
   </div>
 
   <div class="tab-group">
     <mat-tab-group>
-      <mat-tab label="Preview">
+      <mat-tab [label]="'wlo-ui-demo.page.typography.preview' | translate">
         <div class="tab-preview">
-          <wlo-typography tag="h4" variant="h1" text="Build beautiful interfaces, fast." />
+          <wlo-typography tag="h4" variant="h1" [text]="'wlo-ui-demo.page.typography.previewText' | translate" />
         </div>
       </mat-tab>
   
-      <mat-tab label="Code">
+      <mat-tab [label]="'wlo-ui-demo.page.typography.code' | translate">
         <div class="tab-code">
             <code>
               <span>
                 import &#123; WloTypographyComponent &#125; from '&#64;wlo-ui/typography';
               </span><br><br>
               <span>
-                &lt;wlo-typography variant="h1" tag="h1" text="Build beautiful interfaces, fast."&gt;&lt;/wlo-button&gt;
+                &lt;wlo-typography variant="h1" tag="h1" text="{{ 'wlo-ui-demo.page.typography.previewText' | translate }}"&gt;&lt;/wlo-button&gt;
               </span>
             </code>
         </div>
@@ -36,7 +36,7 @@
   </div>
 
   <div class="section-subtitle">
-    <wlo-typography variant="h2" tag="h2" text="Installation"/>
+    <wlo-typography variant="h2" tag="h2" [text]="'wlo-ui-demo.page.typography.installation' | translate"/>
 </div>
 <div class="section-description">
     <wlo-typography variant="p" tag="h3" text="npm"/>
@@ -49,7 +49,7 @@
 </div>
 
 <div class="section-subtitle">
-    <wlo-typography variant="h2" tag="h2" text="Usage"/>
+    <wlo-typography variant="h2" tag="h2" [text]="'wlo-ui-demo.page.typography.usage' | translate"/>
 </div>
 
 <div class="tab-code installation">
@@ -60,37 +60,37 @@
 <div class="tab-code installation">
     <code>
         <span>
-          &lt;wlo-typography variant="h1" tag="h1" text="Build beautiful interfaces, fast."&gt;&lt;/wlo-button&gt;
+          &lt;wlo-typography variant="h1" tag="h1" text="{{ 'wlo-ui-demo.page.typography.previewText' | translate }}"&gt;&lt;/wlo-button&gt;
         </span>
     </code>
 </div>
 
 <div class="section-subtitle">
-    <wlo-typography variant="h2" tag="h2" text="Examples"/>
+    <wlo-typography variant="h2" tag="h2" [text]="'wlo-ui-demo.page.typography.examples' | translate"/>
 </div>
 
   <div class="section-description examples">
-    <wlo-typography variant="h4" tag="h3" text="<strong>Heading 1</strong>"/>
+    <wlo-typography variant="h4" tag="h3" [text]="'wlo-ui-demo.page.typography.example.heading1.title' | translate"/>
   </div>
   <div class="section-description">
-    <wlo-typography variant="p" tag="h3" text="Largest heading, used for main titles and prominent section headers."/>
+    <wlo-typography variant="p" tag="h3" [text]="'wlo-ui-demo.page.typography.example.heading1.description' | translate"/>
   </div>
 
   <mat-tab-group>
-    <mat-tab label="Preview">
+    <mat-tab [label]="'wlo-ui-demo.page.typography.preview' | translate">
       <div class="tab-preview">
-        <wlo-typography tag="h4" variant="h1" text="Build beautiful interfaces, fast." />
+        <wlo-typography tag="h4" variant="h1" [text]="'wlo-ui-demo.page.typography.example.heading1.previewLabel' | translate" />
       </div>
     </mat-tab>
 
-    <mat-tab label="Code">
+    <mat-tab [label]="'wlo-ui-demo.page.typography.code' | translate">
       <div class="tab-code">
           <code>
             <span>
               import &#123; WloTypographyComponent &#125; from '&#64;wlo-ui/typography';
             </span><br><br>
             <span>
-              &lt;wlo-typography variant="h1" tag="h1" text="Build beautiful interfaces, fast."&gt;&lt;/wlo-button&gt;
+              &lt;wlo-typography variant="h1" tag="h1" text="{{ 'wlo-ui-demo.page.typography.previewText' | translate }}"&gt;&lt;/wlo-typography&gt;
             </span>
           </code>
       </div>
@@ -98,27 +98,27 @@
   </mat-tab-group>
 
   <div class="section-description examples">
-    <wlo-typography variant="h4" tag="h3" text="<strong>Heading 2</strong>"/>
+    <wlo-typography variant="h4" tag="h3" [text]="'wlo-ui-demo.page.typography.example.heading2.title' | translate"/>
     </div>
   <div class="section-description">
-    <wlo-typography variant="p" tag="h3" text="Second-level heading, ideal for page or section subtitles."/>
+    <wlo-typography variant="p" tag="h3" [text]="'wlo-ui-demo.page.typography.example.heading2.description' | translate"/>
   </div>
 
   <mat-tab-group>
-    <mat-tab label="Preview">
+    <mat-tab [label]="'wlo-ui-demo.page.typography.preview' | translate">
       <div class="tab-preview">
-        <wlo-typography tag="h4" variant="h2" text="A design system ready to scale with<br>your product." />
+        <wlo-typography tag="h4" variant="h2" [text]="'wlo-ui-demo.page.typography.example.heading2.previewLabel' | translate" />
       </div>
     </mat-tab>
 
-    <mat-tab label="Code">
+    <mat-tab [label]="'wlo-ui-demo.page.typography.code' | translate">
       <div class="tab-code">
           <code>
             <span>
               import &#123; WloTypographyComponent &#125; from '&#64;wlo-ui/typography';
             </span><br><br>
             <span>
-              &lt;wlo-typography variant="h2" tag="h2" text="A design system ready to scale with your product."&gt;&lt;/wlo-button&gt;
+              &lt;wlo-typography variant="h2" tag="h2" text="{{ 'wlo-ui-demo.page.typography.example.heading2.previewLabel' | translate }}"&gt;&lt;/wlo-typography&gt;
             </span>
           </code>
       </div>
@@ -126,27 +126,27 @@
   </mat-tab-group>
 
   <div class="section-description examples">
-    <wlo-typography variant="h4" tag="h3" text="<strong>Heading 3</strong>"/>
+    <wlo-typography variant="h4" tag="h3" [text]="'wlo-ui-demo.page.typography.example.heading3.title' | translate"/>
     </div>
   <div class="section-description">
-    <wlo-typography variant="p" tag="h3" text="Third-level heading for grouping related content under h2."/>
+    <wlo-typography variant="p" tag="h3" [text]="'wlo-ui-demo.page.typography.example.heading3.description' | translate"/>
   </div>
 
   <mat-tab-group>
-    <mat-tab label="Preview">
+    <mat-tab [label]="'wlo-ui-demo.page.typography.preview' | translate">
       <div class="tab-preview">
-        <wlo-typography tag="h4" variant="h3" text="Consistent, accessible, and customizable<br>components." />
+        <wlo-typography tag="h4" variant="h3" [text]="'wlo-ui-demo.page.typography.example.heading3.previewLabel' | translate" />
       </div>
     </mat-tab>
 
-    <mat-tab label="Code">
+    <mat-tab [label]="'wlo-ui-demo.page.typography.code' | translate">
       <div class="tab-code">
           <code>
             <span>
               import &#123; WloTypographyComponent &#125; from '&#64;wlo-ui/typography';
             </span><br><br>
             <span>
-              &lt;wlo-typography variant="h3" tag="h3" text="Consistent, accessible, and customizable components."&gt;&lt;/wlo-button&gt;
+              &lt;wlo-typography variant="h3" tag="h3" text="{{ 'wlo-ui-demo.page.typography.example.heading3.previewLabel' | translate }}"&gt;&lt;/wlo-typography&gt;
             </span>
           </code>
       </div>
@@ -154,27 +154,27 @@
   </mat-tab-group>
 
   <div class="section-description examples">
-    <wlo-typography variant="h4" tag="h3" text="<strong>Heading 4</strong>"/>
+    <wlo-typography variant="h4" tag="h3" [text]="'wlo-ui-demo.page.typography.example.heading4.title' | translate"/>
     </div>
   <div class="section-description">
-    <wlo-typography variant="p" tag="h3" text="Smaller heading, used inside components or content sections."/>
+    <wlo-typography variant="p" tag="h3" [text]="'wlo-ui-demo.page.typography.example.heading4.description' | translate"/>
   </div>
 
   <mat-tab-group>
-    <mat-tab label="Preview">
+    <mat-tab [label]="'wlo-ui-demo.page.typography.preview' | translate">
       <div class="tab-preview">
-        <wlo-typography tag="h4" variant="h4" text="Dark mode? Built-in. Styles? Fully themeable." />
+        <wlo-typography tag="h4" variant="h4" [text]="'wlo-ui-demo.page.typography.example.heading4.previewLabel' | translate" />
       </div>
     </mat-tab>
 
-    <mat-tab label="Code">
+    <mat-tab [label]="'wlo-ui-demo.page.typography.code' | translate">
       <div class="tab-code">
           <code>
             <span>
               import &#123; WloTypographyComponent &#125; from '&#64;wlo-ui/typography';
             </span><br><br>
             <span>
-              &lt;wlo-typography variant="h4" tag="h4" text="Dark mode? Built-in. Styles? Fully themeable."&gt;&lt;/wlo-button&gt;
+              &lt;wlo-typography variant="h4" tag="h4" text="{{ 'wlo-ui-demo.page.typography.example.heading4.previewLabel' | translate }}"&gt;&lt;/wlo-typography&gt;
             </span>
           </code>
       </div>
@@ -182,27 +182,27 @@
   </mat-tab-group>
 
   <div class="section-description examples">
-    <wlo-typography variant="h4" tag="h3" text="<strong>Lead</strong>"/>
+    <wlo-typography variant="h4" tag="h3" [text]="'wlo-ui-demo.page.typography.example.lead.title' | translate" />
     </div>
   <div class="section-description">
-    <wlo-typography variant="p" tag="h3" text="A larger paragraph text for lead-ins or highlights."/>
+    <wlo-typography variant="p" tag="h3" [text]="'wlo-ui-demo.page.typography.example.lead.description' | translate" />
   </div>
 
   <mat-tab-group>
-    <mat-tab label="Preview">
+    <mat-tab [label]="'wlo-ui-demo.page.typography.preview' | translate">
       <div class="tab-preview">
-        <wlo-typography tag="p" variant="lead" text="Get started in minutes with prebuilt components." />
+        <wlo-typography tag="p" variant="lead" [text]="'wlo-ui-demo.page.typography.example.lead.previewLabel' | translate" />
       </div>
     </mat-tab>
 
-    <mat-tab label="Code">
+    <mat-tab [label]="'wlo-ui-demo.page.typography.code' | translate">
       <div class="tab-code">
           <code>
             <span>
               import &#123; WloTypographyComponent &#125; from '&#64;wlo-ui/typography';
             </span><br><br>
             <span>
-              &lt;wlo-typography variant="lead" tag="p" text="Get started in minutes with prebuilt components."&gt;&lt;/wlo-button&gt;
+              &lt;wlo-typography variant="lead" tag="p" text="{{ 'wlo-ui-demo.page.typography.example.lead.previewLabel' | translate}}"&gt;&lt;/wlo-typography&gt;
             </span>
           </code>
       </div>
@@ -210,27 +210,27 @@
   </mat-tab-group>
 
   <div class="section-description examples">
-    <wlo-typography variant="h4" tag="h3" text="<strong>Paragraph</strong>"/>
+    <wlo-typography variant="h4" tag="h3" [text]="'wlo-ui-demo.page.typography.example.paragraph.title' | translate"/>
     </div>
   <div class="section-description">
-    <wlo-typography variant="p" tag="h3" text="Default paragraph for body content."/>
+    <wlo-typography variant="p" tag="h3" [text]="'wlo-ui-demo.page.typography.example.paragraph.description' | translate"/>
   </div>
 
   <mat-tab-group>
-    <mat-tab label="Preview">
+    <mat-tab [label]="'wlo-ui-demo.page.typography.preview' | translate">
       <div class="tab-preview">
-        <wlo-typography tag="p" variant="p" text="WLO UI is your personal UI toolkit for modern Angular projects." />
+        <wlo-typography tag="p" variant="p" [text]="'wlo-ui-demo.page.typography.example.paragraph.previewLabel' | translate" />
       </div>
     </mat-tab>
 
-    <mat-tab label="Code">
+    <mat-tab [label]="'wlo-ui-demo.page.typography.code' | translate">
       <div class="tab-code">
           <code>
             <span>
               import &#123; WloTypographyComponent &#125; from '&#64;wlo-ui/typography';
             </span><br><br>
             <span>
-              &lt;wlo-typography variant="p" tag="p" text="WLO UI is your personal UI toolkit for modern Angular projects."&gt;&lt;/wlo-button&gt;
+              &lt;wlo-typography variant="p" tag="p" text="{{ 'wlo-ui-demo.page.typography.example.paragraph.previewLabel' | translate }}"&gt;&lt;/wlo-typography&gt;
             </span>
           </code>
       </div>
@@ -238,27 +238,27 @@
   </mat-tab-group>
 
   <div class="section-description examples">
-    <wlo-typography variant="h4" tag="h3" text="<strong>Blockquote</strong>"/>
+    <wlo-typography variant="h4" tag="h3" [text]="'wlo-ui-demo.page.typography.example.blockquote.title' | translate"/>
     </div>
   <div class="section-description">
-    <wlo-typography variant="p" tag="h3" text="Used for quoting external content or emphasizing a message."/>
+    <wlo-typography variant="p" tag="h3" [text]="'wlo-ui-demo.page.typography.example.blockquote.description' | translate"/>
   </div>
 
   <mat-tab-group>
-    <mat-tab label="Preview">
+    <mat-tab [label]="'wlo-ui-demo.page.typography.preview' | translate">
       <div class="tab-preview">
-        <wlo-typography tag="blockquote" variant="blockquote" text="“Good design is as little design as possible.” — Dieter Rams" />
+        <wlo-typography tag="blockquote" variant="blockquote" [text]="'wlo-ui-demo.page.typography.example.blockquote.previewLabel' | translate" />
       </div>
     </mat-tab>
 
-    <mat-tab label="Code">
+    <mat-tab [label]="'wlo-ui-demo.page.typography.code' | translate">
       <div class="tab-code">
           <code>
             <span>
               import &#123; WloTypographyComponent &#125; from '&#64;wlo-ui/typography';
             </span><br><br>
             <span>
-              &lt;wlo-typography variant="blockquote" tag="blockquote" text="“Good design is as little design as possible.” — Dieter Rams"&gt;&lt;/wlo-button&gt;
+              &lt;wlo-typography variant="blockquote" tag="blockquote" text="{{ 'wlo-ui-demo.page.typography.example.blockquote.previewLabel' | translate }}"&gt;&lt;/wlo-typography&gt;
             </span>
           </code>
       </div>
@@ -266,28 +266,28 @@
   </mat-tab-group>
 
   <div class="section-description examples">
-    <wlo-typography variant="h4" tag="h3" text="<strong>List</strong>"/>
+    <wlo-typography variant="h4" tag="h3" [text]="'wlo-ui-demo.page.typography.example.list.title' | translate"/>
 
   </div>
   <div class="section-description list">
-    <wlo-typography variant="p" tag="h3" text="Unordered list to display grouped items in a vertical list."/>
+    <wlo-typography variant="p" tag="h3" [text]="'wlo-ui-demo.page.typography.example.list.description' | translate"/>
   </div>
 
   <mat-tab-group>
-    <mat-tab label="Preview">
+    <mat-tab [label]="'wlo-ui-demo.page.typography.preview' | translate">
       <div class="tab-preview">
-        <wlo-typography tag="ul" variant="list" text="<li>Built with Angular 16+</li><li>Standalone components</li><li>Dark mode support</li>" />
+        <wlo-typography tag="ul" variant="list" [text]="'wlo-ui-demo.page.typography.example.list.previewLabel' | translate" />
       </div>
     </mat-tab>
 
-    <mat-tab label="Code">
+    <mat-tab [label]="'wlo-ui-demo.page.typography.code' | translate">
       <div class="tab-code">
           <code>
             <span>
               import &#123; WloTypographyComponent &#125; from '&#64;wlo-ui/typography';
             </span><br><br>
             <span>
-              &lt;wlo-typography variant="blockquote" tag="blockquote" text="&lt;li&gt;Built with Angular 16+&lt;/li&gt;&lt;li&gt;Standalone components&lt;/li&gt;&lt;li&gt;Dark mode support&lt;/li&gt;"&gt;&lt;/wlo-button&gt;
+              &lt;wlo-typography variant="blockquote" tag="blockquote" text="{{ 'wlo-ui-demo.page.typography.example.list.previewLabel' | translate }}"&gt;&lt;/wlo-typography&gt;
             </span>
           </code>
       </div>
@@ -295,29 +295,29 @@
   </mat-tab-group>
 
   <div class="section-description examples">
-    <wlo-typography variant="h4" tag="h3" text="<strong>Code</strong>"/>
+    <wlo-typography variant="h4" tag="h3" [text]="'wlo-ui-demo.page.typography.example.code.title' | translate"/>
 
   </div>
   <div class="section-description">
-    <wlo-typography variant="p" tag="h3" text="Inline or block code with monospace font and background."/>
+    <wlo-typography variant="p" tag="h3" [text]="'wlo-ui-demo.page.typography.example.code.description' | translate"/>
   </div>
 
   <mat-tab-group>
-    <mat-tab label="Preview">
+    <mat-tab [label]="'wlo-ui-demo.page.typography.preview' | translate">
       <div class="tab-preview">
-        <wlo-typography variant="code" tag="code" text="npm install wlo-ui">
+        <wlo-typography variant="code" tag="code" [text]="'wlo-ui-demo.page.typography.example.code.previewLabel' | translate">
         </wlo-typography>
       </div>
     </mat-tab>
 
-    <mat-tab label="Code">
+    <mat-tab [label]="'wlo-ui-demo.page.typography.code' | translate">
       <div class="tab-code">
           <code>
             <span>
               import &#123; WloTypographyComponent &#125; from '&#64;wlo-ui/typography';
             </span><br><br>
             <span>
-              &lt;wlo-typography variant="code" tag="code" text="npm install wlo-ui"&gt;&lt;/wlo-button&gt;
+              &lt;wlo-typography variant="code" tag="code" text="{{ 'wlo-ui-demo.page.typography.example.code.previewLabel' | translate }}"&gt;&lt;/wlo-typography&gt;
             </span>
           </code>
       </div>
@@ -325,29 +325,29 @@
   </mat-tab-group>
 
   <div class="section-description examples">
-    <wlo-typography variant="h4" tag="h3" text="<strong>Large</strong>"/>
+    <wlo-typography variant="h4" tag="h3" [text]="'wlo-ui-demo.page.typography.example.large.title' | translate"/>
 
   </div>
   <div class="section-description">
-    <wlo-typography variant="p" tag="h3" text="Emphasized inline text larger than base size."/>
+    <wlo-typography variant="p" tag="h3" [text]="'wlo-ui-demo.page.typography.example.large.description' | translate"/>
   </div>
 
   <mat-tab-group>
-    <mat-tab label="Preview">
+    <mat-tab [label]="'wlo-ui-demo.page.typography.preview' | translate">
       <div class="tab-preview">
-        <wlo-typography variant="large" tag="span" text="Reusable building blocks.">
+        <wlo-typography variant="large" tag="span" [text]="'wlo-ui-demo.page.typography.example.large.previewLabel' | translate">
         </wlo-typography>
       </div>
     </mat-tab>
 
-    <mat-tab label="Code">
+    <mat-tab [label]="'wlo-ui-demo.page.typography.code' | translate">
       <div class="tab-code">
           <code>
             <span>
               import &#123; WloTypographyComponent &#125; from '&#64;wlo-ui/typography';
             </span><br><br>
             <span>
-              &lt;wlo-typography variant="large" tag="span" text="Reusable building blocks."&gt;&lt;/wlo-button&gt;
+              &lt;wlo-typography variant="large" tag="span" text="{{ 'wlo-ui-demo.page.typography.example.large.title' | translate }}"&gt;&lt;/wlo-typography&gt;
             </span>
           </code>
       </div>
@@ -355,29 +355,29 @@
   </mat-tab-group>
 
   <div class="section-description examples">
-    <wlo-typography variant="h4" tag="h3" text="<strong>Small</strong>"/>
+    <wlo-typography variant="h4" tag="h3" [text]="'wlo-ui-demo.page.typography.example.small.title' | translate"/>
 
   </div>
   <div class="section-description">
-    <wlo-typography variant="p" tag="h3" text="Smaller text, typically for helper or metadata content."/>
+    <wlo-typography variant="p" tag="h3" [text]="'wlo-ui-demo.page.typography.example.small.description' | translate"/>
   </div>
 
   <mat-tab-group>
-    <mat-tab label="Preview">
+    <mat-tab [label]="'wlo-ui-demo.page.typography.preview' | translate">
       <div class="tab-preview">
-        <wlo-typography variant="small" tag="small" text="Lightweight and flexible.">
+        <wlo-typography variant="small" tag="small" [text]="'wlo-ui-demo.page.typography.example.small.previewLabel' | translate">
         </wlo-typography>
       </div>
     </mat-tab>
 
-    <mat-tab label="Code">
+    <mat-tab [label]="'wlo-ui-demo.page.typography.code' | translate">
       <div class="tab-code">
           <code>
             <span>
               import &#123; WloTypographyComponent &#125; from '&#64;wlo-ui/typography';
             </span><br><br>
             <span>
-              &lt;wlo-typography variant="small" tag="small" text="Lightweight and flexible."&gt;&lt;/wlo-button&gt;
+              &lt;wlo-typography variant="small" tag="small" text="{{ 'wlo-ui-demo.page.typography.example.small.previewLabel' | translate }}"&gt;&lt;/wlo-typography&gt;
             </span>
           </code>
       </div>
@@ -385,29 +385,29 @@
   </mat-tab-group>
 
   <div class="section-description examples">
-    <wlo-typography variant="h4" tag="h3" text="<strong>Muted</strong>"/>
+    <wlo-typography variant="h4" tag="h3" [text]="'wlo-ui-demo.page.typography.example.muted.title' | translate"/>
 
   </div>
   <div class="section-description">
-    <wlo-typography variant="p" tag="h3" text="Subtle, less prominent text for hints or secondary content."/>
+    <wlo-typography variant="p" tag="h3" [text]="'wlo-ui-demo.page.typography.example.muted.description' | translate"/>
   </div>
 
   <mat-tab-group>
-    <mat-tab label="Preview">
+    <mat-tab [label]="'wlo-ui-demo.page.typography.preview' | translate">
       <div class="tab-preview">
-        <wlo-typography variant="muted" tag="small" text="Still in early access. Feedback is welcome!">
+        <wlo-typography variant="muted" tag="small" [text]="'wlo-ui-demo.page.typography.example.muted.previewLabel' | translate">
         </wlo-typography>
       </div>
     </mat-tab>
 
-    <mat-tab label="Code">
+    <mat-tab [label]="'wlo-ui-demo.page.typography.code' | translate">
       <div class="tab-code">
           <code>
             <span>
               import &#123; WloTypographyComponent &#125; from '&#64;wlo-ui/typography';
             </span><br><br>
             <span>
-              &lt;wlo-typography variant="muted" tag="small" text="Still in early access. Feedback is welcome!"&gt;&lt;/wlo-button&gt;
+              &lt;wlo-typography variant="muted" tag="small" text="{{ 'wlo-ui-demo.page.typography.example.muted.previewLabel' | translate }}"&gt;&lt;/wlo-typography&gt;
             </span>
           </code>
       </div>
