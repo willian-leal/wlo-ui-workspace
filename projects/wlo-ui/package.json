@@ -2,23 +2,26 @@
   "name": "wlo-ui",
   "version": "1.0.0",
   "description": "A beautiful component library for Angular apps, with dark mode support, SCSS variables, and accessible UI.",
-  "author": "Willian Leal de Oliveira willian.developer@icloud.com",
+  "author": "Willian Leal de Oliveira <willian.developer@icloud.com>",
   "license": "MIT",
   "keywords": ["angular", "component library", "ui", "design system", "dark mode", "scss"],
   "peerDependencies": {
-    "@angular/common": "^16.0.0 || ^17.0.0 || ^18.0.0",
-    "@angular/core": "^16.0.0 || ^17.0.0 || ^18.0.0"
+    "@angular/common": "^19.0.0 || ^20.0.0",
+    "@angular/core": "^19.0.0 || ^20.0.0",
+    "@angular/animations": "^19.0.0 || ^20.0.0",
+    "@angular/cdk": "^19.0.0 || ^20.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@angular/animations": { "optional": true },
+    "@angular/cdk": { "optional": true }
   },
   "dependencies": {},
   "exports": {
-    "./styles/variables": {
-      "sass": "./src/styles/variables.scss"
-    },
-    "./styles": {
-      "sass": "./src/styles/index.scss"
-    },
-    ".": {
-      "default": "./fesm2022/wlo-ui.mjs"
-    }
-  }
+    "./styles/variables": { "sass": "./src/styles/variables.scss" },
+    "./styles": { "sass": "./src/styles/index.scss" },
+    ".": { "default": "./fesm2022/wlo-ui.mjs" }
+  },
+  "sideEffects": [
+    "**/*.scss"
+  ]
 }
