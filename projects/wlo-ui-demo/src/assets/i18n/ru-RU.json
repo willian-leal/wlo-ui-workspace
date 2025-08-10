@@ -1,7 +1,7 @@
 {
-	"wlo-ui.wloButton.pleaseWait": "",
-	"wlo-ui.wloButton.warning.iconAndIconSrc": "",
-	"wlo-ui.wloButton.warning.iconOnlyWithLabel": "",
+	"wlo-ui.wloButton.pleaseWait": "Пожалуйста, подождите",
+	"wlo-ui.wloButton.warning.iconAndIconSrc": "Вы указали и значок, и iconSrc. Пожалуйста, используйте только один из них во избежание противоречий.",
+	"wlo-ui.wloButton.warning.iconOnlyWithLabel": "Вы используете variant=\\\"icon\\\" и также передали метку. Метка будет проигнорирована.",
 	"wlo-ui-demo.button.exploreComponents": "",
 	"wlo-ui-demo.button.viewOnGithub": "",
 	"wlo-ui-demo.layout.langMenu.languages.ar": "АРАБСКИЙ",

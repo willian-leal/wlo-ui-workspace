@@ -1,7 +1,7 @@
 {
-	"wlo-ui.wloButton.pleaseWait": "",
-	"wlo-ui.wloButton.warning.iconAndIconSrc": "",
-	"wlo-ui.wloButton.warning.iconOnlyWithLabel": "",
+	"wlo-ui.wloButton.pleaseWait": "请稍等",
+	"wlo-ui.wloButton.warning.iconAndIconSrc": "您同时提供了 icon 和 iconSrc。请仅使用其中一个以避免不一致。",
+	"wlo-ui.wloButton.warning.iconOnlyWithLabel": "您使用了 variant=\"icon\" 并传递了标签。该标签将被忽略。",
 	"wlo-ui-demo.button.exploreComponents": "",
 	"wlo-ui-demo.button.viewOnGithub": "",
 	"wlo-ui-demo.layout.langMenu.languages.ar": "阿拉伯",

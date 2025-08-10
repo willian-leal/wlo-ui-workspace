@@ -1,7 +1,7 @@
 {
-	"wlo-ui.wloButton.pleaseWait": "",
-	"wlo-ui.wloButton.warning.iconAndIconSrc": "",
-	"wlo-ui.wloButton.warning.iconOnlyWithLabel": "",
+	"wlo-ui.wloButton.pleaseWait": "انتظر من فضلك",
+	"wlo-ui.wloButton.warning.iconAndIconSrc": "لقد وفّرتَ كلاً من الأيقونة ومصدر الأيقونة. يُرجى استخدام أحدهما فقط لتجنب أي تناقضات.",
+	"wlo-ui.wloButton.warning.iconOnlyWithLabel": "أنت تستخدم variant=\\\"icon\\\" وأرسلتَ أيضًا تسمية. سيتم تجاهل التسمية.",
 	"wlo-ui-demo.button.exploreComponents": "",
 	"wlo-ui-demo.button.viewOnGithub": "",
 	"wlo-ui-demo.layout.langMenu.languages.ar": "عربي",
